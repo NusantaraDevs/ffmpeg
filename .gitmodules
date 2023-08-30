@@ -1,0 +1,12 @@
+[submodule "ffmpeg"]
+	path = ffmpeg
+	url = https://github.com/FFmpeg/FFmpeg
+	branch = release/4.2
+[submodule "media"]
+	path = media
+	url = https://github.com/androidx/media.git
+	branch = release
+[submodule "libass"]
+	path = libass
+	url = https://github.com/libass/libass
+	branch = 0.17.1

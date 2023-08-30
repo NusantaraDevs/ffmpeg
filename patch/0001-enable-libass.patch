@@ -1,0 +1,25 @@
+From a7ae4a2facd7254ad3acd86df20a195e76c50b48 Mon Sep 17 00:00:00 2001
+From: Ahmad Thoriq Najahi <najahi@zephyrus.id>
+Date: Wed, 30 Aug 2023 14:50:14 +0700
+Subject: [PATCH] enable libass
+
+Signed-off-by: Ahmad Thoriq Najahi <najahi@zephyrus.id>
+---
+ libraries/decoder_ffmpeg/src/main/jni/build_ffmpeg.sh | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/libraries/decoder_ffmpeg/src/main/jni/build_ffmpeg.sh b/libraries/decoder_ffmpeg/src/main/jni/build_ffmpeg.sh
+index 1583c1c964..6d00f1cc8d 100755
+--- a/libraries/decoder_ffmpeg/src/main/jni/build_ffmpeg.sh
++++ b/libraries/decoder_ffmpeg/src/main/jni/build_ffmpeg.sh
+@@ -38,6 +38,7 @@ COMMON_OPTIONS="
+     --disable-avresample
+     --enable-swresample
+     --extra-ldexeflags=-pie
++    --enable-libass
+     "
+ TOOLCHAIN_PREFIX="${NDK_PATH}/toolchains/llvm/prebuilt/${HOST_PLATFORM}/bin"
+ for decoder in "${ENABLED_DECODERS[@]}"
+-- 
+2.34.1
+
