@@ -45,13 +45,6 @@ jobs:
         # https://github.com/android/ndk/wiki/Unsupported-Downloads
         run: sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;$NDK_VER"
 
-      - name: Applying patches
-        run: |
-          git config --global user.email "najahi@zephyrus.id"
-          git config --global user.name "Ahmad Thoriq Najahi"
-          cd media
-          git am ../patch/0001-enable-libass.patch
-
       - name: Build ffmpeg
         run: |
           export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/$NDK_VER
